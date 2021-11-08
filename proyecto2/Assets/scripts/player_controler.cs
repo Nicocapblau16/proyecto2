@@ -7,20 +7,21 @@ public class player_controler : MonoBehaviour
     private Vector3 initialPos = Vector3.zero;
     public float speed = 10f;
     private float horizontalInput;
-    private float xRange = 20;
+    private float xRange = 17;
 
     public GameObject proyectilPrefab;
 
     
     void Start()
     {
-        transform.position = initialPos;
+        transform.position = initialPos;  //posicion inicial del player
 
     }
 
     
     void Update()
     {
+        //movimiento horizontal player
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(translation: Vector3.right * Time.deltaTime * speed * horizontalInput);
 
